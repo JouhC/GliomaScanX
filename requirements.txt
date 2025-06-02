@@ -1,0 +1,8 @@
+matplotlib
+numpy
+opencv-python
+pillow
+seaborn
+scikit-learn
+scipy
+tqdm
