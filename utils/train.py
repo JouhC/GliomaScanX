@@ -136,6 +136,12 @@ def train_model(
         if val_acc > best_val_acc:
             best_val_acc = val_acc
             if save_path:
+                # Get directory from the path
+                dir_path = os.path.dirname(save_path)
+
+                # Check if directory exists
+                if not os.path.isdir(dir_path):
+                    os.makedirs(dir_path)
                 torch.save(model.state_dict(), save_path)
 
         # Early stopping
